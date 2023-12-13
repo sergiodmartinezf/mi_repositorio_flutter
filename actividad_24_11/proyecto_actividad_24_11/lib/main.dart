@@ -13,7 +13,7 @@ class app1 extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(title: const Text('boton')),
+        appBar: AppBar(title: const Text('Ejemplo Flutter')),
         body: const ElevatedButtonExample(),
       ),
     );
@@ -41,18 +41,14 @@ class _ElevatedButtonExampleState extends State<ElevatedButtonExample> {
         children: <Widget>[
           ElevatedButton(
             style: style,
-            onPressed: null,
-            child: const Text('Disabled'),
-          ),
-          const SizedBox(height: 30),
-          ElevatedButton(
-            style: style,
             onPressed: () {
               setState(() {
-                String mensaje = '¡Hola Mundo!';
+                //void main(){
+                  print('Hola Mundo');
+                //}
             });
             },
-            child: const Text('Enabled'),
+            child: const Text('Presiona para Saludar'),
           ),
         ],
       ),

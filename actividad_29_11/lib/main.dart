@@ -14,7 +14,7 @@ class CardExampleApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(title: const Text('')),
+        appBar: AppBar(title: const Text('Sedes Universidad de Los Lagos')),
         body: const Column(
           children: <Widget>[
             Spacer(),
@@ -47,14 +47,17 @@ class card1 extends StatelessWidget {
 
         child: SizedBox(
             width: 300,
-            height: 100,
+            height: 200,
 
         child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: <Widget>[
-            ListTile(
-              leading: Image.asset('images/foto1.png'), // Añade la imágen
-            ),
+          mainAxisAlignment : MainAxisAlignment.center,
+          children: <Widget>[Image.asset(
+                'foto1.png',
+                width: 250,
+                height: 150,
+              ), // Añade la imágen
+            //),
+            const Text('Ulagos Sede Osorno')
           ],
         ),
       ),

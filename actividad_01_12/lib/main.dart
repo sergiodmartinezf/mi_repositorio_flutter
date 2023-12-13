@@ -19,8 +19,7 @@ class MyApp extends StatelessWidget {
           children: <Widget>[
             Spacer(),
             CarouselSlider1(),
-            //card1(),
-            Spacer(),
+            //Spacer(),
           ],
         ),
       ),
@@ -36,7 +35,7 @@ const CarouselSlider1({super.key});
 // Widget para generar el slider
 Widget build(BuildContext context) {
 	return CarouselSlider(
-      options: CarouselOptions(height: 600.0),
+      options: CarouselOptions(height: 400.0),
       items: [
         // Crea los card para cada pokemon y se ponen en el slider
         buildCard('charmander.png'),
@@ -53,19 +52,21 @@ Widget buildCard(String pokemon) {
         clipBehavior: Clip.hardEdge,
         child: SizedBox(
             width: 260,
-            height: 340,
+            height: 400,
         child: Column(
           //mainAxisSize: MainAxisSize.min,
           mainAxisAlignment : MainAxisAlignment.center,
           children: <Widget>[
-            ListTile(
-              leading: Image.asset(
+            //ListTile(
+              //leading: Image.asset(
+              Image.asset(
                 pokemon,
-                height: 300, // Adjust the height as needed
-                width: 300, // Adjust the width as needed
+                height: 200, // Adjust the height as needed
+                width: 200, // Adjust the width as needed
+                //scale: 2,
                 fit: BoxFit.contain,
               )
-            ),
+            //),
           ],
         ),
       ),
