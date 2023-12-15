@@ -145,7 +145,7 @@ class card3 extends StatelessWidget {
 }
 
 
-
+// Botón para redirigir a la página de la Universidad
 class ElevatedButtonExample extends StatefulWidget {
   const ElevatedButtonExample({super.key});
 
