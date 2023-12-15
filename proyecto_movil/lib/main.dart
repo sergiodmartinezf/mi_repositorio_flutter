@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:carousel_slider/carousel_slider.dart';
+//import 'package:carousel_slider/carousel_slider.dart';
 
 void main() {
   runApp(const AppMovil());
@@ -16,8 +16,7 @@ class AppMovil extends StatelessWidget {
         appBar: AppBar(title: const Text('')),
         body: const Column(
           children: <Widget>[
-            Spacer(),
-            CarouselSlider1(),
+            TopBar(),
             //Spacer(),
           ],
         ),
@@ -26,51 +25,20 @@ class AppMovil extends StatelessWidget {
   }
 }
 
-// Slider con las imágenes de los pokemones
-class CarouselSlider1 extends StatelessWidget {
-const CarouselSlider1({super.key});
+class TopBar extends StatelessWidget {
+  const TopBar({super.key});
 
-@override
-// Widget para generar el slider
-Widget build(BuildContext context) {
-	return CarouselSlider(
-      options: CarouselOptions(height: 400.0),
-      items: [
-        // Crea los card para cada pokemon y se ponen en el slider
-        buildCard('charmander.png'),
-        buildCard('bulbasaur.png'),
-        buildCard('squirtle.png')
-      ]
-  );
-}
-
-// Widget para generar los card
-Widget buildCard(String pokemon) {
-    return Center(
-      child: Card(
-        clipBehavior: Clip.hardEdge,
-        child: SizedBox(
-            width: 260,
-            height: 400,
-        child: Column(
-          //mainAxisSize: MainAxisSize.min,
-          mainAxisAlignment : MainAxisAlignment.center,
-          children: <Widget>[
-            //ListTile(
-              //leading: Image.asset(
-              Image.asset(
-                pokemon,
-                height: 200, // Adjust the height as needed
-                width: 200, // Adjust the width as needed
-                //scale: 2,
-                fit: BoxFit.contain,
-              )
-            //),
-          ],
-        ),
-      ),
-      ),
-    );
+  @override
+  Widget build(BuildContext context) {
+    return AppBar(
+        title: const Text('top bar'),
+        backgroundColor: Colors.blue,
+        toolbarHeight: 150,
+        //elevation: 1.00,
+      );
   }
 }
+
+
+
 
